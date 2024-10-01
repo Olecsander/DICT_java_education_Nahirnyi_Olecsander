@@ -27,5 +27,23 @@ public class ChatBot {
         for (int i = 1; i <= userNumber; i++)
             System.out.println(i + " !");
 
+        System.out.println("What statement is used to output data in Java?");
+        System.out.println("1. print()");
+        System.out.println("2. System.out.println()");
+        System.out.println("3. echo()");
+        System.out.println("4. output()");
 
+        int correctAnswer = 2;
+        int userAnswer;
+
+        do {
+            userAnswer = scanner.nextInt();
+
+            if (userAnswer != correctAnswer) {
+                System.out.println("Wrong");
+            }
+        } while (userAnswer != correctAnswer);
+
+        System.out.println("Correct\nGoodbye, have a nice day!");
+    }
 }
