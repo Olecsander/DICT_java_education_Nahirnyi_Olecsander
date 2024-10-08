@@ -25,3 +25,14 @@ public class hangman {
         }
     }
 
+    private static void playGame() {
+        String[] words = {"python", "java", "javascript", "kotlin"};
+        Random random = new Random();
+        int randomIndex = random.nextInt(words.length);
+        String secretWord = words[randomIndex];
+
+        int attemptsLeft = 8;
+        boolean[] guessedLetters = new boolean[26];
+
+        Scanner scanner = new Scanner(System.in);
+
