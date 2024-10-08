@@ -58,3 +58,26 @@ public class hangman {
                 continue;
             }
 
+            guessedLetters[userGuess - 'a'] = true;
+
+            if (secretWord.contains(String.valueOf(userGuess))) {
+                System.out.println();
+            } else {
+                System.out.println("That letter doesn't appear in the word");
+                attemptsLeft--;
+
+                if (attemptsLeft > 0) {
+                    System.out.println();
+                } else {
+                    System.out.println("You lost!");
+                    break;
+                }
+            }
+
+            if (guessedWord(secretWord, guessedLetters)) {
+                System.out.println("You guessed the word " + secretWord + "\nYou survived!");
+                break;
+            }
+        }
+    }
+
