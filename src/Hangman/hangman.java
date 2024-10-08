@@ -46,3 +46,15 @@ public class hangman {
                 continue;
             }
 
+            char userGuess = userInput.charAt(0);
+
+            if (!Character.isLowerCase(userGuess)) {
+                System.out.println("Please enter a lowercase English letter");
+                continue;
+            }
+
+            if (guessedLetters[userGuess - 'a']) {
+                System.out.println("You've already guessed this letter");
+                continue;
+            }
+
