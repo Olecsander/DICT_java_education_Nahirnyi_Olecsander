@@ -93,3 +93,12 @@ public class hangman {
         System.out.println();
     }
 
+    private static boolean guessedWord(String secretWord, boolean[] guessedLetters) {
+        for (char letter : secretWord.toCharArray()) {
+            if (!guessedLetters[letter - 'a']) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
