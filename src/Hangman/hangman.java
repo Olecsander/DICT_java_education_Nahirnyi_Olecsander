@@ -36,3 +36,13 @@ public class hangman {
 
         Scanner scanner = new Scanner(System.in);
 
+        while (attemptsLeft > 0) {
+            displayCurrentWord(secretWord, guessedLetters);
+            System.out.print("Input a letter: > ");
+            String userInput = scanner.next();
+
+            if (userInput.length() != 1) {
+                System.out.println("You should input a single letter");
+                continue;
+            }
+
