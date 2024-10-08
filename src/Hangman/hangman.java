@@ -81,3 +81,15 @@ public class hangman {
         }
     }
 
+    private static void displayCurrentWord(String secretWord, boolean[] guessedLetters) {
+        System.out.print("Current word: ");
+        for (char letter : secretWord.toCharArray()) {
+            if (guessedLetters[letter - 'a']) {
+                System.out.print(letter);
+            } else {
+                System.out.print("-");
+            }
+        }
+        System.out.println();
+    }
+
